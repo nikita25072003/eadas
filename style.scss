@@ -1,0 +1,928 @@
+$full-size: 100%;
+$margin: 0;
+$bg-color: #1C1C1C;
+$box-sizing: border-box;
+$cursor: pointer;
+$display: flex;
+$font-size: 12px;
+$line-height: 17px;
+$color-white: #fff;
+$color-dark-grey: #696969;
+$color-dark: #1c1c1c;
+$color-light-blue: #b6d7e8;
+
+html, body {
+  font-family: "Futura PT", sans-serif;
+  height: $full-size;
+  margin: $margin;
+}
+
+// Wrapper
+
+.wrapper, .first-section {
+  width: $full-size;
+  height: $full-size;
+}
+
+// First-section
+
+.first-section {
+  background-size: cover;
+  background-position: center;
+  background-image: url(./img/photo-background-1.png);
+}
+
+// Top-part-first-section
+
+.top-part-first-section {
+  display: $display;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: $full-size;
+  height: 15%;
+  padding-left: 54px;
+  box-sizing: $box-sizing;
+}
+
+.logo-section {
+  display: $display;
+  flex-direction: row;
+  align-items: center;
+  width: 34%;
+  height: $full-size;
+}
+
+.logo-first-section {
+  cursor: $cursor;
+  margin-right: 410px;
+}
+
+.list-section {
+  display: $display;
+  flex-direction: row;
+  align-items: center;
+  width: 66%;
+  height: $full-size;
+}
+
+a {
+  text-decoration: none;
+}
+
+@mixin item-main {
+  cursor: $cursor;
+  font-weight: 400;
+  font-size: $font-size;
+  margin-right: 28px;
+  color: #c8c7c7;
+}
+
+.item-main {
+  @include item-main;
+}
+
+.item-projects, .item-contacts, .item-twitter, .item-facebook, .item-instagram {
+  @include item-main;
+  transition: 0.3s;
+  color: $color-dark-grey;
+}
+
+.item-projects:hover, .item-contacts:hover, .item-twitter:hover, 
+.item-facebook:hover, .item-instagram:hover {
+  color: #838282;
+}
+
+// center-part-first-section
+
+.center-part-first-section {
+  display: $display;
+  flex-direction: column;
+  justify-content: center;
+  width: $full-size;
+  height: 65%;
+}
+
+.title-first-section {
+  font-weight: 700;
+  font-size: 81px;
+  margin: $margin;
+  margin-left: 135px;
+  color: $color-white;
+}
+
+// Bottom-part-first-section
+
+.bottom-part-first-section {
+  display: $display;
+  flex-direction: row;
+  width: $full-size;
+  height: 20%;
+  padding-left: 54px;
+  box-sizing: $box-sizing;
+}
+
+@mixin phone-number {
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+}
+
+.phone-number {
+  @include phone-number;
+  font-weight: 400;
+  margin-top: 58px;
+  margin-right: 238px;
+  color: $color-dark-grey;
+}
+
+.descr-first-section {
+  @include phone-number;
+  font-weight: 300;
+  margin-top: 24px;
+  color: #999;
+}
+
+// Second-section
+
+.second-section {
+  display: $display;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: $full-size;
+  height: 442px;
+  padding: 67px 45px;
+  box-sizing: $box-sizing;
+  background-color: #fff;
+}
+
+// Left-part-second-section, Center-part-second-section
+
+@mixin left-part-second-section {
+  height: $full-size;
+  margin-right: 67px;
+}
+
+.left-part-second-section {
+  @include left-part-second-section;
+  width: 30%;
+}
+
+.dash-second-section {
+  color: $color-light-blue;
+}
+
+@mixin title-about-company {
+  font-weight: 700;
+  font-size: $font-size + 6px;
+  margin: $margin;
+  margin-bottom: 30px;
+  color: $color-dark;
+}
+
+.title-about-company, .title-our-projects {
+  @include title-about-company;
+}
+
+.descr-left-part {
+  font-weight: 400;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+  margin-left: 10px;
+  color: $color-dark;
+}
+
+.center-part-second-section {
+  @include left-part-second-section;
+  width: 25%;
+}
+
+@mixin number-one {
+  font-weight: 400;
+  font-size: $font-size + 4px;
+  line-height: 24px;
+  margin: $margin;
+  margin-right: 12px;
+  color: $color-light-blue;
+}
+
+.number-one, .number-two, .number-three {
+  @include number-one;
+}
+
+.title-second-section {
+  font-weight: 600;
+  font-size: $font-size + 4px;
+  line-height: 33px; 
+  margin: $margin;
+  color: $color-dark;
+}
+
+@mixin descr-center-part-first {
+  font-weight: 300;
+  font-size: $font-size;
+  line-height: 15px;
+  margin: $margin;
+  margin: 8px 0 18px 30px;
+  color: $color-dark;
+}
+
+.descr-center-part-first, .descr-center-part-second {
+  @include descr-center-part-first;
+}
+
+.descr-center-part-third {
+  @include descr-center-part-first;
+  margin: $margin;
+  margin: 8px 0 0 30px;
+}
+
+// Right-part-second-section
+
+.right-part-second-section {
+  @include left-part-second-section;
+  width: calc(45% - 134px);
+  margin: $margin;
+}
+
+.office {
+  width: $full-size;
+  height: $full-size;
+}
+
+// Third-section
+
+.third-section {
+  display: $display;
+  flex-direction: column;
+  width: $full-size;
+  height: 1015px;
+  padding: 68px 0;
+  box-sizing: $box-sizing;
+  background-color: #f9f9f9;
+}
+
+// Top-part-third-section, Center-part-third-section, Bottom-part-third-section
+
+@mixin top-part-third-section {
+  display: $display;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: $full-size;
+  height: 294px;
+}
+
+.top-part-third-section, .center-part-third-section, .bottom-part-third-section {
+  @include top-part-third-section;
+  padding: 0 45px;
+  box-sizing: $box-sizing;
+}
+
+@mixin top-part-left-third-section {
+  width: 30%;
+  height: $full-size;
+  margin-right: 67px;
+}
+
+.top-part-left-third-section, .center-part-left-third-section, 
+.bottom-part-left-third-section {
+  @include top-part-left-third-section;
+}
+
+.top-part-center-third-section, .center-part-center-third-section, .bottom-part-center-third-section {
+  @include top-part-left-third-section;
+  display: $display;
+  flex-direction: row;
+  width: 25%;
+}
+
+.top-part-right-third-section, .center-part-right-third-section, .bottom-part-right-third-section {
+  @include top-part-left-third-section;
+  width: calc(45% - 134px);
+  margin: $margin;
+}
+
+@mixin title-the-rock-and-roll {
+  font-weight: 500;
+  font-size: $font-size + 6px;
+  margin: $margin;
+  margin-left: 46px;
+  color: $color-dark;
+}
+
+.title-the-rock-and-roll {
+  @include title-the-rock-and-roll;
+}
+
+.title-regierungsviertel-airport, .title-one-world-observatory {
+  @include title-the-rock-and-roll;
+  margin-top: 30px;
+}
+
+@mixin top-list-main-questions {
+  font-weight: 300;
+  font-size: $font-size;
+  margin: $margin;
+  margin-top: 50px;
+  margin-right: 70px;
+  color: $color-dark-grey;
+}
+
+.top-list-main-questions, .center-list-main-questions, .bottom-list-main-questions  {
+  @include top-list-main-questions;
+}
+
+.center-list-main-questions, .bottom-list-main-questions {
+  margin-top: 30px;
+}
+
+.top-list-main-answers, .center-list-main-answers, .bottom-list-main-answers {
+  @include top-list-main-questions;
+  font-weight: 400;
+  font-size: $font-size;
+  color: $color-dark;
+}
+
+.center-list-main-answers, .bottom-list-main-answers {
+  margin-top: 30px;
+}
+
+.building-1, .building-2, .building-3 {
+  width: $full-size;
+  height: $full-size;
+}
+
+// Forth-section
+
+.forth-section {
+  display: $display;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: $full-size;
+  height: 417px;
+  padding: 0 45px;
+  box-sizing: $box-sizing;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./img/photo-background-2.png);
+}
+
+// Left-part-forth-section
+
+.left-part-forth-section {
+  display: $display;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: $full-size;
+  margin-right: 67px;
+}
+
+.title-calculator-project {
+  font-weight: 700;
+  font-size: $font-size + 6px;
+  margin: $margin;
+  margin-bottom: 45px;
+  color: $color-white;
+}
+
+.list-country, .list-city, .list-style, .list-place {
+  width: $full-size;
+  max-width: 316px;
+  height: 45px;
+  padding-left: 30px;
+  box-sizing: $box-sizing;
+  margin-left: 10px;
+  margin-bottom: 36px;
+  font-weight: 400;
+  font-size: $font-size + 4px;
+  color: $color-white;
+  border: solid 1px #b6d7e8;
+  background-color: transparent;
+}
+
+.cost {
+  cursor: $cursor;
+  width: $full-size;
+  max-width: 316px;
+  height: 45px;
+  margin-left: 10px;
+  border: 0;
+  font-weight: 400;
+  font-size: $font-size + 2px;
+  color: $color-dark;
+  transition: 0.7s;
+  background-color: #b6d7e8;
+}
+
+.list-style {
+  margin-top: 18px;
+}
+
+.cost:hover {
+  color: $color-white;
+  background-color: #8bc8e7;
+}
+
+// Center-part-forth-section
+
+.center-part-forth-section {
+  display: $display;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+  height: $full-size;
+  margin-right: 67px;
+}
+
+// Right-part-forth-section
+
+.right-part-forth-section {
+  display: $display;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  width: calc(50% - 134px);
+  margin: $margin;
+}
+
+.building-4 {
+  width: $full-size - 12%;
+  height: 70%;
+}
+
+// Footer
+
+.footer {
+  display: $display;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: $full-size;
+  height: 164px;
+  background-color: $bg-color;
+}
+
+.left-part-footer, .right-part-footer {
+  width: 33.3%;
+  height: $full-size;
+  padding: 70px 0 0 54px;
+  box-sizing: $box-sizing;
+}
+
+.logo-footer-section {
+  cursor: $cursor;
+}
+
+.center-part-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 33.4%;
+  height: $full-size;
+}
+
+.right-part-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding: 0;
+  padding-right: 54px;
+  box-sizing: $box-sizing;
+}
+
+@mixin phone-number-footer {
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+}
+
+.phone-number-footer {
+  @include phone-number-footer;
+  font-weight: 400;
+  color: $color-dark-grey;
+}
+
+$laptop1: 1280px;
+$laptop2: 1060px;
+$tablet1: 950px;
+$tablet2: 868px;
+$tablet3: 800px;
+$tablet4: 700px;
+$tablet5: 650px;
+$mobile1: 530px;
+$mobile2: 500px;
+$mobile3: 460px;
+$mobile4: 430px;
+$mobile5: 400px;
+$mobile6: 364px;
+
+@media screen and (max-width: $laptop1) {
+
+  .second-section {
+    flex-direction: column;
+    align-items: center;
+    height: 744px;
+  }
+
+  @mixin left-part-second-section {
+    height: 50%;
+    margin: $margin;
+  }
+
+  .office, .building-4 {
+    width: $full-size;
+    height: 60%;
+  }
+
+  .building-1, .building-2, .building-3 {
+    width: $full-size;
+    height: $full-size;
+  }
+
+  .left-part-second-section, .center-part-second-section {
+    @include left-part-second-section;
+    width: 50%;
+  }
+
+  .right-part-second-section {
+    @include left-part-second-section;
+  }
+
+  .right-part-second-section, .top-part-right-third-section, 
+  .center-part-right-third-section, .bottom-part-right-third-section {
+    display: $display;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .right-part-second-section, .top-part-right-third-section, 
+  .center-part-right-third-section, .bottom-part-right-third-section, .right-part-forth-section {
+    width: calc(50% - 40px);
+    height: $full-size;
+    margin-left: 40px;
+  }
+
+  .third-section {
+    height: 1005px;
+  }
+
+  .top-part-third-section, .center-part-third-section, .bottom-part-third-section {
+    flex-direction: column;
+    height: 288px;
+  }
+
+  .top-part-left-third-section, .center-part-left-third-section, .bottom-part-left-third-section, 
+  .top-part-center-third-section, .center-part-center-third-section, .bottom-part-center-third-section {
+    width: 50%;
+    margin: $margin;
+  }
+
+  .top-part-left-third-section, .center-part-left-third-section, .bottom-part-left-third-section {
+    height: 25%;
+  }
+
+  .top-part-center-third-section, .center-part-center-third-section, .bottom-part-center-third-section {
+    align-items: center;
+    height: 75%;
+    padding-left: 46px;
+    box-sizing: $box-sizing;
+  }
+
+  .top-list-main-questions, .center-list-main-questions, .bottom-list-main-questions, 
+  .top-list-main-answers, .center-list-main-answers, .bottom-list-main-answers {
+    margin: $margin;
+  }
+
+  .top-list-main-questions, .center-list-main-questions, .bottom-list-main-questions {
+    margin-right: 70px;
+  }
+
+  .forth-section {
+    flex-direction: column;
+    height: 494px;
+  }
+
+  .left-part-forth-section, .center-part-forth-section {
+    width: 50%;
+    margin: $margin;
+  }
+
+  .left-part-forth-section {
+    height: 65%;
+  }
+
+  .center-part-forth-section {
+    justify-content: flex-start;
+    height: 35%;
+  }
+  
+}
+
+@media screen and (max-width: $laptop2) {
+
+  .office, .building-4 {
+    height: 50%;
+  }
+
+  .title-first-section {
+    font-size: 61px;
+  }
+
+}
+
+@media screen and (max-width: $tablet1) {
+
+  .office, .building-4 {
+    height: 40%;
+  }
+
+}
+
+@media screen and (max-width: $tablet2) {
+
+  .title-first-section {
+    font-size: 51px;
+  }
+
+  .second-section {
+    height: 1116px;
+  }
+
+  @mixin left-part-second-section {
+    height: 33.3%;
+    margin: $margin;
+  }
+
+  .left-part-second-section, .center-part-second-section, .right-part-second-section {
+    @include left-part-second-section;
+  }
+
+  .office {
+    width: $full-size;
+    height: $full-size;
+  }
+
+  .third-section {
+    height: 2039px;
+  }
+
+  .top-part-third-section, .center-part-third-section, .bottom-part-third-section {
+    flex-direction: column;
+    align-items: center;
+    height: 632px;
+  }
+
+  .top-part-left-third-section, .center-part-left-third-section, .bottom-part-left-third-section,
+  .top-part-center-third-section, .center-part-center-third-section, .bottom-part-center-third-section,
+  .left-part-second-section, .center-part-second-section, .right-part-second-section, 
+  .top-part-right-third-section, .center-part-right-third-section, .bottom-part-right-third-section,
+  .left-part-forth-section, .center-part-forth-section, .right-part-forth-section {
+    width: 60%;
+  }
+
+  .top-part-left-third-section, .center-part-left-third-section, .bottom-part-left-third-section {
+    height: 15%;
+  }
+
+  .top-part-center-third-section, .center-part-center-third-section, 
+  .bottom-part-center-third-section, .left-part-forth-section {
+    height: 35%;
+  }
+
+  .top-part-right-third-section, .center-part-right-third-section, .bottom-part-right-third-section {
+    height: 50%;
+    margin: $margin;
+  }
+
+  .forth-section {
+    align-items: center;
+    height: 904px;
+  }
+
+  .center-part-forth-section {
+    height: 20%;
+  }
+
+  .right-part-forth-section {
+    align-items: flex-start;
+    height: 45%;
+    margin: $margin;
+  }
+
+  .building-4 {
+    width: $full-size;
+    height: 75%;
+  }
+
+}
+
+@media screen and (max-width: $tablet3) {
+
+  .top-part-left-third-section, .center-part-left-third-section, .bottom-part-left-third-section,
+  .top-part-center-third-section, .center-part-center-third-section, .bottom-part-center-third-section,
+  .left-part-second-section, .center-part-second-section, .right-part-second-section, 
+  .top-part-right-third-section, .center-part-right-third-section, .bottom-part-right-third-section,
+  .left-part-forth-section, .center-part-forth-section, .right-part-forth-section {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: $tablet4) {
+
+  .top-part-left-third-section, .center-part-left-third-section, .bottom-part-left-third-section,
+  .top-part-center-third-section, .center-part-center-third-section, .bottom-part-center-third-section,
+  .left-part-second-section, .center-part-second-section, .right-part-second-section, 
+  .top-part-right-third-section, .center-part-right-third-section, .bottom-part-right-third-section,
+  .left-part-forth-section, .center-part-forth-section, .right-part-forth-section {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: $tablet5) {
+
+  .top-part-first-section {
+    padding: 0;
+  }
+
+  .logo-section, .list-section {
+    width: $full-size;
+    height: 50%;
+  }
+
+  .logo-section {
+    padding-left: 54px;
+    box-sizing: $box-sizing;
+  }
+
+  .list-section {
+    justify-content: center;
+  }
+
+  .center-part-first-section {
+    height: 55%;
+  }
+
+  .title-first-section {
+    font-size: 46px;
+    margin: $margin;
+    margin-left: 54px;
+  }
+
+  .bottom-part-first-section {
+    flex-direction: column;
+    justify-content: center;
+    height: 30%;
+  }
+
+  .phone-number {
+    margin: $margin;
+  }
+  
+  .descr-first-section {
+    margin-top: 24px;
+  }
+
+  .top-part-left-third-section, .center-part-left-third-section, .bottom-part-left-third-section,
+  .top-part-center-third-section, .center-part-center-third-section, .bottom-part-center-third-section,
+  .left-part-second-section, .center-part-second-section, .right-part-second-section, 
+  .top-part-right-third-section, .center-part-right-third-section, .bottom-part-right-third-section,
+  .left-part-forth-section, .center-part-forth-section, .right-part-forth-section {
+    width: 90%;
+  }
+
+  .footer {
+    flex-direction: column;
+    height: 162px;
+  }
+
+  .left-part-footer, .right-part-footer {
+    width: $full-size;
+    height: 33.3%;
+  }
+
+  .left-part-footer {
+    display: $display;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+  
+  .center-part-footer {
+    justify-content: flex-start;
+    width: $full-size;
+    height: 33.4%;
+  }
+
+  .right-part-footer {
+    align-items: flex-start;
+  }
+
+  .left-part-footer, .center-part-footer, .right-part-footer {
+    padding-left: 74px;
+    box-sizing: $box-sizing;
+  }
+
+}
+
+@media screen and (max-width: $mobile1) {
+
+  .top-part-third-section, .center-part-third-section, .bottom-part-third-section {
+    padding: 0;
+  }
+
+  .second-section {
+    padding-bottom: 45px;
+  }
+
+  .top-part-left-third-section, .center-part-left-third-section, .bottom-part-left-third-section,
+  .top-part-center-third-section, .center-part-center-third-section, .bottom-part-center-third-section,
+  .left-part-second-section, .center-part-second-section, .right-part-second-section, 
+  .top-part-right-third-section, .center-part-right-third-section, .bottom-part-right-third-section,
+  .left-part-forth-section, .center-part-forth-section, .right-part-forth-section {
+    width: 95%;
+  }
+
+}
+
+@media screen and (max-width: $mobile2) {
+
+  .title-first-section {
+    text-align: center;
+    margin: $margin;
+  }
+
+  .third-section {
+    height: 1896px;
+  }
+
+}
+
+@media screen and (max-width: $mobile3) {
+
+  .office {
+    height: 80%;
+  }
+
+  .building-4 {
+    height: 70%;
+  }
+
+  .forth-section {
+    height: 894px;
+  }
+
+}
+
+@media screen and (max-width: $mobile4) {
+
+  .title-first-section {
+    font-size: 41px;
+  }
+
+  .phone-number, .descr-first-section {
+    font-size: 10px;
+  }
+
+}
+
+@media screen and (max-width: $mobile5) {
+
+  .left-part-footer, .center-part-footer, .right-part-footer {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .center-part-footer, .list-section  {
+    padding-left: 24px;
+  }
+
+  .right-part-footer {
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width: $mobile6) {
+
+  .title-first-section {
+    font-size: 31px;
+  }
+  
+  .title-the-rock-and-roll, .title-regierungsviertel-airport, .title-one-world-observatory {
+    margin: $margin;
+    text-align: center;
+  }
+
+  .title-regierungsviertel-airport, .title-one-world-observatory {
+    margin-top: 30px;
+  }
+
+  .list-country, .list-city, .list-style, .list-place, .cost  {
+    max-width: 266px;
+  }
+
+}
